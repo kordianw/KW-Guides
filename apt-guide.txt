@@ -18,22 +18,22 @@ INSTALL:
                               * apt install --only-upgrade package <-- only upgrades
 - sudo dpkg -i package        install local pkg
 
-INSTALL without root:
+INSTALL PACKAGES without root:
 - apt-get download package
 - dpkg -i package.deb --force-not-root --root=$HOME/pkgs
 /OR/
 - apt-get download package
-- dpkg -x package.deb $HOME/pkgs
+- dpkg -x package.deb $HOME/pkgs 	<-- extracts the pakage as-is
 /OR/
 - apt-get source package
 - cd package
 - ./configure --prefix=$HOME/pkgs
 - make
-- make install
+- make install 				<-- tries to compile & install
+/OR/
+https://github.com/fsquillace/junest 	<-- installs Arch Linux in $HOME with full rights
 /OR/
 https://github.com/dex4er/fakechroot
-/OR/
-https://github.com/fsquillace/junest
 
 REMOVE:
 - sudo apt remove package     Uninstalls a package
