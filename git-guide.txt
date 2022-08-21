@@ -8,9 +8,9 @@ Git/GitHub GIT Guide
   then can store the key in the git config for that repo
   $ git config --local core.sshCommand "/usr/bin/ssh -i $HOME/.ssh/id_rsa_foo"
   EG:
-  $ git clone -c core.sshCommand="/usr/bin/ssh -i $HOME/.ssh/kordianw-github-io" git@github.com:kordianw/kordianw.github.io.git
-  $ cd kordianw-github-io
-  $ git config --local core.sshCommand "/usr/bin/ssh -i $HOME/.ssh/kordianw-github-io"
+  $ git clone -c core.sshCommand="/usr/bin/ssh -i $HOME/.ssh/<username>-github-io" git@github.com:<username>/<username>.github.io.git
+  $ cd <username>-github-io
+  $ git config --local core.sshCommand "/usr/bin/ssh -i $HOME/.ssh/<username>-github-io"
   $ git fetch; git pull
 
 * ignore SSL
