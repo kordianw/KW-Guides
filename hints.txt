@@ -1,0 +1,42 @@
+OSI Network Layers
+==================
+Layer 7 - Application (eg: www browsers, telnet, ftp)
+Layer 6 - Presentation (eg: encryption, compression, ASCII, MPEG, JPG)
+Layer 5 - Session (eg: NFS, NetBios, RPC, connections between applications)
+Layer 4 - Transport (eg: TCP, UDP, flow-control)
+Layer 3 - Network (eg: IP, addressing, routing)
+Layer 2 - Data Link (eg: MAC address, PPP, FDDI, ATM, IEEE 802.5/ 802.2)
+Layer 1 - Physical (eg: Ethernet, RJ45, modem, hub/switch, cables)
+
+Chrome
+======
+1) chrome://flags/#allow-insecure-localhost
+Allows requests to localhost over HTTPS even when an invalid certificate is presented
+2) Ignore SSL warnings: ignore all SSL errors by passing the following at the command line:
+--ignore-certificate-errors
+eg: on Mac start Chrome from bash: /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --ignore-certificate-e                          rrors &> /dev/null &
+
+Updating GRUB
+=============
+$ sudo vi /etc/default/grub
+GRUB_DEFAULT=x 	# which entry is the default, 0=1st, 1=2nd, etc
+GRUB_TIMEOUT=x  # how many seconds before default?
+$ sudo update-grub
+actually update the GRUB after changes were made
+
+Volume on Linux/Mint
+====================
+- alsamixer 
+check everything is set to 100% correctly, use F6 to switch between cards
+- XFCE4 (GUI):
+$ pavucontrol
+- XFCE4 (CLI):
+$ pactl -- set-sink-volume 0 +10%  # raise volume by each 10% (more than 100% possible, might distort the sound)
+$ pactl -- set-sink-volume 0 -10%  # reduce volume by each 10%
+$ pactl -- set-sink-mute 0 toggle  # mute/unmutes audio
+- alsamixer:
+$ amixer set Master 10%+   # raise volume by each 10 %
+$ amixer set Master 10%-   # reduce volume by each 10 %
+$ amixer set Master toggle # mute/unmute audio
+
+# EOF

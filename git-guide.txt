@@ -1,0 +1,90 @@
+Git/GitHub GIT Guide
+====================
+* setting up specific git SSH keys
+  ssh-keygen to create a key
+  add the public key in GitHub settings: https://github.com/settings/keys
+  when cloning for the first time via SSH:
+  $ git clone -c core.sshCommand="/usr/bin/ssh -i $HOME/.ssh/id_rsa_foo" git@github.com:me/repo.git
+  then can store the key in the git config for that repo
+  $ git config --local core.sshCommand "/usr/bin/ssh -i $HOME/.ssh/id_rsa_foo"
+  EG:
+  $ git clone -c core.sshCommand="/usr/bin/ssh -i $HOME/.ssh/kordianw-github-io" git@github.com:kordianw/kordianw.github.io.git
+  $ cd kordianw-github-io
+  $ git config --local core.sshCommand "/usr/bin/ssh -i $HOME/.ssh/kordianw-github-io"
+  $ git fetch; git pull
+
+* ignore SSL
+git config --global http.sslVerify false
+
+* ignore file permissions (useful on windows/cygwin)
+git config core.fileMode false
+
+* add default username for git clone
+NOTE: can also do this in ~/.gitconfig
+git config --global user.name kwitek
+git config --global credential.https://github.com.username kwitek
+
+* login to proxy
+git config --global http.proxy http://<AD user>:<AD pass>@oproxy.isp.com:8080
+
+* git file rename
+git mv old new
+git commit
+git push
+
+* GUIDE:
+git clone username@host:/path/to/repository
+git add <filename>
+git commit -m "message"
+git push origin master
+
+git fetch                               # download all the latest changes from remote, but don't apply
+git pull                                # cf: cvs update - most common command to update your local tree!
+git checkout business_logic
+git pull business_logic
+git merge api                           # merges another branch's changes into your branch
+git push -u origin business_logic       # -u origin: in case you're working with other remotes, but usually not needed
+
+git checkout -- <filename>              # revert your changes for a file and restore back from git
+git fetch origin; git reset --hard origin/master        # drop all your local changes and commits, fetch the latest history from the server and point your local master branch at it
+
+* Branching
+git checkout -b feature_x       # create a new branch named "feature_x" and switch to it
+git checkout master             # switch back to master
+git branch                      # what branch are you in?
+git branch -a                   # see all branches
+git branch -d feature_x         # delete the branch
+git push origin <branch>        # push the branch
+git merge <branch>              # merge another branch into your branch
+git diff <source_branch> <target_branch>        # check diff between 2 branches
+
+* STAGE 1: Bringing in changes from master into my branch
+$ git checkout master                           # checkout master
+$ git pull master                               # pull all the latest changes from master
+$ git checkout business_logic                   # switch to branch
+$ git merge master                              # merge master into branch
+$ git push business_logic
+
+* STAGE 2: Branching and then merging back branch into master
+NB: make sure you do Stage 1 to be fully up to date
+$ git checkout master                           # start here...
+$ git pull master                               # make sure you're up to date
+$ git branch new-branch                         # create new-branch
+$ git checkout new-branch
+# ...develop some code...
+$ git add –A                                    # add all files
+$ git commit –m "Some commit message"           # commit all files
+$ git checkout master                           # switch to master
+$ git merge new-branch                          # merge new-branch into master
+$ git push master
+NB: may be better to do a pull request though to be sure/safe!
+
+* Tagging
+git tag 1.0.0 1b2e1d63ff        # add a tag to a commit ID
+git log                         # get commit IDs
+
+* git log
+git log --author=bob            # just me;-)
+git log --name-status           # which files have changed?
+git log --pretty=oneline        # one-liner ;)
+git log --graph --oneline --decorate --all

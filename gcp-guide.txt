@@ -1,0 +1,85 @@
+gcloud
+======
+DOCUMENTATION: https://cloud.google.com/sdk/docs
+REFERENCE: https://cloud.google.com/sdk/gcloud/reference
+* Install GCLOUD: https://cloud.google.com/sdk/docs/install-sdk#linux
+
+$ gcloud init 					Initialize, authorize, and configure the gcloud CLI
+$ gcloud init --console-only 			* same but console only (no browser)
+$ gcloud version 				Display version and installed components.
+$ gcloud components list 			Display all installed components & their size
+$ gcloud components update 			Upgrade gcloud components
+$ gcloud info 					Display current gcloud CLI environment details
+$ gcloud config configurations list 		Display a list of all available configurations.
+NAME     IS_ACTIVE  ACCOUNT            PROJECT             COMPUTE_DEFAULT_ZONE  COMPUTE_DEFAULT_REGION
+default  True       kordian@gmail.com  kw-general-purpose  us-east4-c            us-east4
+
+$ gcloud config list 				Display all the properties for the current configuration
+[compute]
+region = us-east4
+zone = us-east4-c
+[core]
+account = kordian@gmail.com
+disable_usage_reporting = true
+project = kw-general-purpose
+Your active configuration is: [default]
+
+$ gcloud logging logs list 			List your project's logs.
+
+* Authentication/Login
+$ gcloud auth login --no-launch-browser 	authenticate with a new account
+$ gcloud auth list 				list current authenticated accounts
+$ gcloud auth revoke [ACCOUNT] 			revoke access
+						*NB*: should also remove from https://myaccount.google.com/permissions
+$ gcloud auth print-identity-token 		Display the current account's access token
+$ gcloud config configurations list 		Display a list of all available configurations.
+$ gcloud config set account `ACCOUNT`		set to a different account
+tokens stored in: ~/.config/gcloud
+
+* work with projects
+$ gcloud projects describe kw-general-purpose 	provide details on the current project
+$ gcloud config set project <project-id>
+
+$ gcloud config list project 			current project (method 1, more details)
+$ gcloud config get-value project 		current project (method 2, one-liner, into scripts)
+
+* work with COMPUTE
+$ gcloud compute instances list
+NAME       ZONE        MACHINE_TYPE  PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP   STATUS
+gcp-nexus  us-east1-d  e2-micro                   10.142.0.9   35.231.80.43  RUNNING
+$ 
+
+Cloud Run (container/serverless)
+================================
+Based on Knative (Kubernetes)
+$ gcloud config get-value project 		get PROJECT-ID
+$ gcloud container images list 			list current container images
+
+* run via doocker
+$ docker run -d -p 8080:8080 gcr.io/[PROJECT-ID]/helloworld
+
+GCP DCs & Locations
+===================
+OVERALL+MAP: https://cloud.google.com/about/locations
+DETAIL: https://cloud.google.com/compute/docs/regions-zones
+ALSO: https://www.economize.cloud/resources/regions-zones-map
+
+check that running on GCP Compute Engine
+========================================
+$ dig +short metadata.google.internal
+$ curl metadata.google.internal -i 2>/dev/null | grep -q "Metadata-Flavor: Google"
+$ sudo dmidecode -s system-product-name | grep -q "Google Compute Engine"
+$ dmesg | grep -q "BIOS Google"
+
+metadata.google.internal
+========================
+IP=169.254.169.254 (also a DNS server)
+* get all metadata:
+$ curl -sS -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/instance/?recursive=true
+    GCP_FQDN=`curl -sS -H "Metadata-Flavor: Google" metadata/computeMetadata/v1/instance/hostname`
+    GCP_DC_ZONE=`curl -sS -H "Metadata-Flavor: Google" metadata/computeMetadata/v1/instance/zone | sed 's/.*\///'`
+    MACHINE_IMAGE=`curl -sS -H "Metadata-Flavor: Google" metadata/computeMetadata/v1/instance/image | sed 's/.*\///'`
+    MACHINE_TYPE=`curl -sS -H "Metadata-Flavor: Google" metadata/computeMetadata/v1/instance/machine-type | sed 's/.*\///'`
+    CPU_PLATFORM=`curl -sS -H "Metadata-Flavor: Google" metadata/computeMetadata/v1/instance/cpu-platform`
+    DISK_TYPE=`curl -sS -H "Metadata-Flavor: Google" metadata/computeMetadata/v1/instance/disks/0/type | sed -e 's/\(.*\)/\L\1/'`
+
