@@ -21,8 +21,8 @@ git config core.fileMode false
 
 * add default username for git clone
 NOTE: can also do this in ~/.gitconfig
-git config --global user.name kwitek
-git config --global credential.https://github.com.username kwitek
+git config --global user.name <username
+git config --global credential.https://github.com.username <username>
 
 * login to proxy
 git config --global http.proxy http://<AD user>:<AD pass>@oproxy.isp.com:8080
