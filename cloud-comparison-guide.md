@@ -1,7 +1,69 @@
 # Cloud Comparison
 
 ## Free Tier Comparison:
+
+### AWS
+
+Link: https://was.amazon.com/free
+
+12-Months Free:
+- Many services, incl. EC2, only for new accounts
+  - t2.micro / t3.micro, 750 hrs/month, free for only 12 months
+
+Always-Free:
+- Amazon DynamoDB (NoSQL): 25 GB of storage
+- AWS Lambda (FaaS): 1 Million free requests per month
+- Amazon SNS: 1 Million publishes (Mobile Push)
+
 Link: https://github.com/cloudcommunity/Cloud-Free-Tier-Comparison
+
+### AZURE
+
+Link: https://azure.microsoft.com/en-us/free
+
+12-Months Free:
+- Many services, incl. VMs, only for new accounts
+- $200 free credit for 30 days
+
+Always-Free:
+- Azure Cosmos DB (1,000 request units per-second provisioned throughput with 25 GB storage)
+- Azure App Service (10 web, mobile, or API apps with 1 GB storage)
+- Azure Functions (1 million requests)
+
+### GCP
+
+Link: https://cloud.google.com/free/docs/gcp-free-tier
+
+90-Days Free:
+- 90-day, $300 Free Trial for new accounts only
+
+Always-Free:
+- Compute VM "e2-micro": 2 vCPU (0.25 cores committed), 1G RAM, 30 GB persistent-disk (only on us-west1, us-central1 and us-east1)
+  - approximate value: ~$6.11/month
+  - closest free-tier DC is us-east1 (S.Carolina), then us-central1 (Iowa)
+  - comes with 1 free external public IP address
+- 5GB Google Cloud Storage: only on us-west1, us-central1 & us-east1
+- 5 GB-month snapshot storage
+- 1GB of network egress (except China and Australia)
+- ...many others, see: https://cloud.google.com/free/docs/free-cloud-features#free-tier
+
+### Oracle Cloud
+
+Link: https://www.oracle.com/cloud/free/
+
+30-Days Free:
+- 30-day, $300 Free Trial for new accounts only
+
+Always-Free:
+- 2 AMD-based VMs: 0.25 vCPU and 1 GB RAM each;
+- 4 Arm-based VMs: 24 GB RAM total, 3,000 vCPU hours and 18,000 GB hours per month;
+- Storage:
+  - 2 Block Volumes Storage, 200 GB total;
+  - 10 GB Object Storage - Standard;
+  - 10 GB Object Storage - Infrequent Access;
+  - 10 GB Archive Storage;
+  - 10TB of network egress;
+
 
 ## Cloud Shell Comparison:
 
