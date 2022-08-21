@@ -12,14 +12,14 @@ $ gcloud components update 			Upgrade gcloud components
 $ gcloud info 					Display current gcloud CLI environment details
 $ gcloud config configurations list 		Display a list of all available configurations.
 NAME     IS_ACTIVE  ACCOUNT            PROJECT             COMPUTE_DEFAULT_ZONE  COMPUTE_DEFAULT_REGION
-default  True       kordian@gmail.com  kw-general-purpose  us-east4-c            us-east4
+default  True       <email>@gmail.com  kw-general-purpose  us-east4-c            us-east4
 
 $ gcloud config list 				Display all the properties for the current configuration
 [compute]
 region = us-east4
 zone = us-east4-c
 [core]
-account = kordian@gmail.com
+account = <email>@gmail.com
 disable_usage_reporting = true
 project = kw-general-purpose
 Your active configuration is: [default]
@@ -46,7 +46,7 @@ $ gcloud config get-value project 		current project (method 2, one-liner, into s
 * work with COMPUTE
 $ gcloud compute instances list
 NAME       ZONE        MACHINE_TYPE  PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP   STATUS
-gcp-nexus  us-east1-d  e2-micro                   10.142.0.9   35.231.80.43  RUNNING
+gcp-nexus  us-east1-d  e2-micro                   10.142.0.9   35.231.XX.XX  RUNNING
 $ 
 
 Cloud Run (container/serverless)
