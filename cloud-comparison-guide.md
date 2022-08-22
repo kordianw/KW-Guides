@@ -64,6 +64,21 @@ Always-Free:
   - 10 GB Archive Storage;
   - 10TB of network egress;
 
+### LINODE
+
+No Free Tier, but $50 credit for 60 days
+- Credit goes up to $100 for 60 days when using a YouTube influencer link
+
+- VMs start from $5/month
+- Nearest DC is in Newark, NJ
+
+### Digital Ocean
+
+No Free Tier, but $100 credit for 60 days
+
+- VMs start from $4/month
+- Nearest DC is in New York City, NY
+
 
 ## Cloud Shell Comparison:
 
