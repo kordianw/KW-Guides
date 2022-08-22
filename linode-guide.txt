@@ -41,6 +41,10 @@ $ linode-cli linodes view $linode_id 	<-- view particular linode
 # create new linode, adding SSH key for linode username & prompting for root password
 $ linode-cli linodes create --label nexus --type g6-dedicated-2 --region us-east --image linode/ubuntu18.04 --authorized_users <your-linode-username> --root_pass
 
+# delete linode
+$ linode-cli linodes list 		<-- get the linode id
+$ linode linodes delete <ID> 		<-- delete linode
+
 common linode types
 ===================
 g6-nanode-1    @ $0.0075/hour = $ 5/month, 1vCPU shared   /1GB-RAM/25GB SSD
