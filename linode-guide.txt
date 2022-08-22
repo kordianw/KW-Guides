@@ -3,6 +3,8 @@ lincode pricing/regions
 https://www.linode.com/pricing/
 https://www.linode.com/global-infrastructure/
 $ linode-cli linodes types 		<-- machine types and prices
+NB: Hourly Billing (min=1 hour, max capped at monthly rate)
+NB: note that linode charges for shutdown servers, in order to avoid charge, need to delete the resource entirely
 
 install linode-cli
 ==================
@@ -39,11 +41,19 @@ $ linode-cli linodes list 		<-- my current linodes
 $ linode-cli linodes view $linode_id 	<-- view particular linode
 
 # create new linode, adding SSH key for linode username & prompting for root password
-$ linode-cli linodes create --label nexus --type g6-dedicated-2 --region us-east --image linode/ubuntu18.04 --authorized_users <your-linode-username> --root_pass
 
-# delete linode
+$ linode-cli linodes create --label nanode5m     --type g6-nanode-1    --region us-east --image linode/ubuntu18.04 --authorized_users <your-linode-username> --root_pass
+$ linode-cli linodes create --label nanode20m    --type g6-standard-2  --region us-east --image linode/ubuntu18.04 --authorized_users <your-linode-username> --root_pass
+$ linode-cli linodes create --label dedicated30m --type g6-dedicated-2 --region us-east --image linode/ubuntu18.04 --authorized_users <your-linode-username> --root_pass
+
+$ linode-cli linodes upgrade $lin_id	<-- upgrade linode if upgrade is available (incl. shutdown/restart migration)
+
+# rebuild with a different image
+$ linode-cli linodes rebuild $lin_id --image linode/debian9 --root-pass
+
+# delete linode:
 $ linode-cli linodes list 		<-- get the linode id
-$ linode linodes delete <ID> 		<-- delete linode
+$ linode linodes delete $lin_id		<-- delete linode
 
 common linode types
 ===================
