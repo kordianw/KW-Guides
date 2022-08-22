@@ -15,6 +15,8 @@ Always-Free:
 - AWS Lambda (FaaS): 1 Million free requests per month
 - Amazon SNS: 1 Million publishes (Mobile Push)
 
+- US-EAST: nearest DC is in Ashburn, VA
+
 Link: https://github.com/cloudcommunity/Cloud-Free-Tier-Comparison
 
 ### AZURE
@@ -29,6 +31,8 @@ Always-Free:
 - Azure Cosmos DB (1,000 request units per-second provisioned throughput with 25 GB storage)
 - Azure App Service (10 web, mobile, or API apps with 1 GB storage)
 - Azure Functions (1 million requests)
+
+- US-EAST: nearest DC is in Ashburn, VA
 
 ### GCP
 
@@ -46,6 +50,9 @@ Always-Free:
 - 5 GB-month snapshot storage
 - 1GB of network egress (except China and Australia)
 - ...many others, see: https://cloud.google.com/free/docs/free-cloud-features#free-tier
+
+- US-EAST: nearest paid DC is in NC or OH
+- US-EAST: nearest always-free DC is in SC or IA
 
 ### Oracle Cloud
 
@@ -69,15 +76,15 @@ Always-Free:
 No Free Tier, but $50 credit for 60 days
 - Credit goes up to $100 for 60 days when using a YouTube influencer link
 
-- VMs start from $5/month
-- Nearest DC is in Newark, NJ
+- VMs start from $5/month (for 1CPU/1GB RAM/SSD)
+- US-EAST: Nearest DC is in Newark, NJ
 
 ### Digital Ocean
 
 No Free Tier, but $100 credit for 60 days
 
-- VMs start from $4/month
-- Nearest DC is in New York City, NY
+- VMs start from $4/month (for 1CPU/512MB RAM/SSD)
+- US-EAST: Nearest DC is in New York City, NY
 
 
 ## Cloud Shell Comparison:
