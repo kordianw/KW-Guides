@@ -1,0 +1,68 @@
+lincode pricing/regions
+=======================
+https://www.linode.com/pricing/
+https://www.linode.com/global-infrastructure/
+$ linode-cli linodes types 		<-- machine types and prices
+
+install linode-cli
+==================
+$ sudo apt update
+$ sudo apt install python3 python3-pip
+cd $HOME
+$ pip3 install linode-cli --upgrade
+<should install to: ~/.local/bin and ~/.local/lib/python3>
+
+configure linode-cli
+====================
+$ linode-cli configure --token
+get token from: https://cloud.linode.com/profile/tokens
+create a new Personal Access Token
+$ cat .config/linode-cli
+
+current status/bill
+===================
+$ linode-cli account view 		<-- status + how much owed?
+$ linode-cli account notifications-list <-- any account notifications?
+$ linode-cli account invoices-list
+$ linode-cli account invoices-view
+
+linode-cli general
+==================
+$ linode-cli regions list 		<-- regions available
+$ linode-cli images list 		<-- images available
+$ linode-cli events list 		<-- latest events
+
+linode-cli compute
+==================
+$ linode-cli linodes types 		<-- machine types and prices
+$ linode-cli linodes list 		<-- my current linodes
+$ linode-cli linodes view $linode_id 	<-- view particular linode
+
+# create new linode, adding SSH key for linode username & prompting for root password
+$ linode-cli linodes create --label nexus --type g6-dedicated-2 --region us-east --image linode/ubuntu18.04 --authorized_users <your-linode-username> --root_pass
+
+common linode types
+===================
+g6-nanode-1    @ $0.0075/hour = $ 5/month, 1vCPU shared   /1GB-RAM/25GB SSD
+g6-standard-1  @ $ 0.015/hour = $10/month, 1vCPU shared   /2GB-RAM/50GB SSD
+g6-standard-2  @ $  0.03/hour = $20/month, 2xCPU shared   /4GB-RAM/80GB SSD
+g6-dedicated-2 @ $ 0.045/hour = $30/month, 2xCPU dedicated/4GB-RAM/80GB SSD
+
+common image types
+==================
+linode-cli images list
+- linode/almalinux9
+- linode/alpine3.16
+- linode/arch
+- linode/centos-stream9
+- linode/debian11
+- linode/debian11-kube-v1.23.6
+- linode/fedora36
+- linode/gentoo
+- linode/kali
+- linode/opensuse15.4
+- linode/rocky9
+- linode/slackware15.0
+- linode/ubuntu22.04
+
+# EOF
