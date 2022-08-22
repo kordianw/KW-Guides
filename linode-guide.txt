@@ -51,10 +51,11 @@ g6-nanode-1    @ $0.0075/hour = $ 5/month, 1vCPU shared   /1GB-RAM/25GB SSD
 g6-standard-1  @ $ 0.015/hour = $10/month, 1vCPU shared   /2GB-RAM/50GB SSD
 g6-standard-2  @ $  0.03/hour = $20/month, 2xCPU shared   /4GB-RAM/80GB SSD
 g6-dedicated-2 @ $ 0.045/hour = $30/month, 2xCPU dedicated/4GB-RAM/80GB SSD
+* As of 2022, common CPU in use is: AMD EPYC 7601 32-Core (Naples'17) 2.2GHz
 
 common image types
 ==================
-linode-cli images list
+$ linode-cli images list
 - linode/almalinux9
 - linode/alpine3.16
 - linode/arch

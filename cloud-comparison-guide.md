@@ -108,6 +108,7 @@ Documentation: https://docs.microsoft.com/en-us/azure/cloud-shell/overview
 
 ### OTHERS:
 - http://www.pythonanywhere.com  <-- good spec (4x vCPU/16GB/Cascade Lake'19), AWS, no root/no sudo, suited best for python
+  - for $5-$6/month can be used with more features incl. SSH-in (ssh.pythonanywhere.com) and full internet access
 - https://www.online-ide.com/  <-- can run basic shell commands, no outside internet access
 - https://www.webminal.org/terminal/  <-- basic shell, no outside internet access
 
