@@ -33,6 +33,7 @@ linode-cli general
 $ linode-cli regions list 		<-- regions available
 $ linode-cli images list 		<-- images available
 $ linode-cli events list 		<-- latest events
+use `--text' at the end of every cmd, to get text output
 
 linode-cli compute
 ==================
@@ -42,9 +43,9 @@ $ linode-cli linodes view $linode_id 	<-- view particular linode
 
 # create new linode, adding SSH key for linode username & prompting for root password
 
-$ linode-cli linodes create --label nanode5m     --type g6-nanode-1    --region us-east --image linode/ubuntu18.04 --authorized_users <your-linode-username> --root_pass
-$ linode-cli linodes create --label nanode20m    --type g6-standard-2  --region us-east --image linode/ubuntu18.04 --authorized_users <your-linode-username> --root_pass
-$ linode-cli linodes create --label dedicated30m --type g6-dedicated-2 --region us-east --image linode/ubuntu18.04 --authorized_users <your-linode-username> --root_pass
+$ linode-cli linodes create --label nj-nanode5m     --type g6-nanode-1    --region us-east --image linode/ubuntu18.04 --authorized_users <your-linode-username> --root_pass
+$ linode-cli linodes create --label nj-nanode20m    --type g6-standard-2  --region us-east --image linode/ubuntu18.04 --authorized_users <your-linode-username> --root_pass
+$ linode-cli linodes create --label nj-dedicated30m --type g6-dedicated-2 --region us-east --image linode/ubuntu18.04 --authorized_users <your-linode-username> --root_pass
 
 $ linode-cli linodes upgrade $lin_id	<-- upgrade linode if upgrade is available (incl. shutdown/restart migration)
 
