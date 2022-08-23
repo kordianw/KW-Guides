@@ -17,6 +17,10 @@ Always-Free:
 
 - US-EAST: nearest DC is in Ashburn, VA
 
+Pricing: easy curl command:
+- curl -L 'ec2.shop?filter=.nano'
+- curl -L 'ec2.shop?filter=.small'
+
 Link: https://github.com/cloudcommunity/Cloud-Free-Tier-Comparison
 
 ### AZURE
@@ -129,10 +133,14 @@ Documentation: https://docs.was.amazon.com/cloudshell/
 Documentation: https://docs.microsoft.com/en-us/azure/cloud-shell/overview
 
 ### OTHERS:
-- http://www.pythonanywhere.com  <-- good spec (4x vCPU/16GB/Cascade Lake'19), AWS, no root/no sudo, suited best for python
+- http://www.pythonanywhere.com  <-- good spec (4x vCPU/16GB/Cascade Lake'19, NVMEe SSD), AWS, no root/no sudo, suited best for python
   - for $5-$6/month can be used with more features incl. SSH-in (ssh.pythonanywhere.com) and full internet access
+  - PROS: fast AWS machine type: m5d.xlarge (4x vCPU/16GB/Cascade Lake'19/NVMEe SSD), easy web-accessibility, optional SSH access, Ubuntu
+  - CONS: no-root/no-sudo, NFS mounted key directories, highly restricted build
 - https://www.online-ide.com/  <-- can run basic shell commands, no outside internet access
+  - VERY limited, not recommended for anything but testing
 - https://www.webminal.org/terminal/  <-- basic shell, no outside internet access
+  - VERY limited, not recommended for anything but testing
 
 ## Cloud Shell Pros+Cons
 

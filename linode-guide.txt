@@ -58,6 +58,7 @@ $ linode linodes delete $lin_id		<-- delete linode
 
 common linode types
 ===================
+$ linode-cli linodes types
 g6-nanode-1    @ $0.0075/hour = $ 5/month, 1vCPU shared   /1GB-RAM/25GB SSD
 g6-standard-1  @ $ 0.015/hour = $10/month, 1vCPU shared   /2GB-RAM/50GB SSD
 g6-standard-2  @ $  0.03/hour = $20/month, 2xCPU shared   /4GB-RAM/80GB SSD
