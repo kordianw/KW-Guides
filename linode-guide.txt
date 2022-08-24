@@ -77,8 +77,8 @@ g6-standard-1  @ $ 0.015/hour = $10/month, 1vCPU shared   /2GB-RAM/50GB SSD
 g6-standard-2  @ $  0.03/hour = $20/month, 2xCPU shared   /4GB-RAM/80GB SSD
 g6-dedicated-2 @ $ 0.045/hour = $30/month, 2xCPU dedicated/4GB-RAM/80GB SSD
 * As of 2022, common CPUs in use are:
-- NJ:  AMD EPYC 7501 & 7601 32-Core (Naples'17) & AMD EPYC 7542 32-Core (Rome'19)
-- TOR: AMD EPYC 7601 32-Core (Naples'17) & AMD EPYC 7642 48-Core (Rome'19)
+- Newark, NJ:  AMD EPYC 7501 & 7601 32-Core (Naples'17) & AMD EPYC 7542 32-Core (Rome'19)
+- Toronto, ON: AMD EPYC 7601 32-Core (Naples'17) & AMD EPYC 7642 48-Core (Rome'19)
 * linode provides SSD local storage at no extra cost, on all tiers
 
 Reference: Common OS image types
