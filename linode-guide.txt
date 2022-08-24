@@ -4,7 +4,7 @@ https://www.linode.com/pricing/
 https://www.linode.com/global-infrastructure/
 $ linode-cli linodes types 		<-- machine types and prices
 * Hourly Billing (min=1 hour, max capped at monthly rate)
-* note that linode charges for shutdown servers, in order to avoid charge, need to delete the resource entirely
+* NB: note that linode charges for non-running/shutdown servers, in order to avoid charge, need to delete the resource entirely
 * linode provides SSD local storage at no extra cost, on all tiers
 
 Object Storage Cost - S3 compatible
@@ -12,7 +12,10 @@ Object Storage Cost - S3 compatible
 https://www.linode.com/pricing/#object-storage
 Plans: 250GB @ $5/month w/1TB transfer & <50mln objects
 $0.02 / GB  +  $0.01 / GB Additional Outbound Transferred
+* minimum charge of $5/month for 250GB of Storage, with free inbound & 1TB outbound transfer
+* beyond 250GB, Hourly Billing (min=1 hour, max capped at monthly rate)
 * charged hourly, up to a monthly cap
+* free in-bound transfer, up to 1TB/month outbound transfer included
 * comparison with AWS+GCP: https://www.linode.com/products/object-storage/
 * implemented using Ceph
 
