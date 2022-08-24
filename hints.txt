@@ -14,7 +14,7 @@ Chrome
 Allows requests to localhost over HTTPS even when an invalid certificate is presented
 2) Ignore SSL warnings: ignore all SSL errors by passing the following at the command line:
 --ignore-certificate-errors
-eg: on Mac start Chrome from bash: /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --ignore-certificate-e                          rrors &> /dev/null &
+eg: on Mac start Chrome from bash: /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --ignore-certificate-errors &> /dev/null &
 
 Updating GRUB
 =============
