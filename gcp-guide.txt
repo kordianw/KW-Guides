@@ -82,3 +82,6 @@ $ curl -sS -H "Metadata-Flavor: Google" http://metadata.google.internal/computeM
     MACHINE_TYPE=`curl -sS -H "Metadata-Flavor: Google" metadata/computeMetadata/v1/instance/machine-type | sed 's/.*\///'`
     CPU_PLATFORM=`curl -sS -H "Metadata-Flavor: Google" metadata/computeMetadata/v1/instance/cpu-platform`
     DISK_TYPE=`curl -sS -H "Metadata-Flavor: Google" metadata/computeMetadata/v1/instance/disks/0/type | sed -e 's/\(.*\)/\L\1/'`
+
+# vi:syntax=markdown:
+# EOF

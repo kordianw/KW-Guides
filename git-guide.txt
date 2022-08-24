@@ -88,3 +88,6 @@ git log --author=bob            # just me;-)
 git log --name-status           # which files have changed?
 git log --pretty=oneline        # one-liner ;)
 git log --graph --oneline --decorate --all
+
+# vi:syntax=markdown:
+# EOF

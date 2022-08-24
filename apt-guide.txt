@@ -62,3 +62,6 @@ APT_FILE:
 Note: apt is a front-end for apt-get, apt-cache and dpkg
 
 apt history is in /var/log/apt/history.log
+
+# vi:syntax=markdown:
+# EOF
