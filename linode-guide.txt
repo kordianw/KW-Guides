@@ -47,6 +47,9 @@ $ linode-cli linodes create --label nj-nanode5m     --type g6-nanode-1    --regi
 $ linode-cli linodes create --label nj-nanode20m    --type g6-standard-2  --region us-east --image linode/ubuntu18.04 --authorized_users <your-linode-username> --root_pass
 $ linode-cli linodes create --label nj-dedicated30m --type g6-dedicated-2 --region us-east --image linode/ubuntu18.04 --authorized_users <your-linode-username> --root_pass
 
+NB: about ~1 min total to create & boot a new VM
+NB: by default, new and non-established accounts can not create VMs which cost >$100/month
+
 $ linode-cli linodes upgrade $lin_id	<-- upgrade linode if upgrade is available (incl. shutdown/restart migration)
 
 # rebuild with a different image
@@ -63,7 +66,9 @@ g6-nanode-1    @ $0.0075/hour = $ 5/month, 1vCPU shared   /1GB-RAM/25GB SSD
 g6-standard-1  @ $ 0.015/hour = $10/month, 1vCPU shared   /2GB-RAM/50GB SSD
 g6-standard-2  @ $  0.03/hour = $20/month, 2xCPU shared   /4GB-RAM/80GB SSD
 g6-dedicated-2 @ $ 0.045/hour = $30/month, 2xCPU dedicated/4GB-RAM/80GB SSD
-* As of 2022, common CPU in use is: AMD EPYC 7601 32-Core (Naples'17) 2.2GHz
+* As of 2022, common CPU in use is:
+- NJ:  AMD EPYC 7501 & 7601 32-Core (Naples'17) & AMD EPYC 7542 32-Core (Rome'19)
+- TOR: AMD EPYC 7601 32-Core (Naples'17) & AMD EPYC 7642 48-Core (Rome'19)
 
 common image types
 ==================
