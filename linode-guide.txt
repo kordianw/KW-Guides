@@ -7,6 +7,18 @@ $ linode-cli linodes types 		<-- machine types and prices
 * NB: note that linode charges for non-running/shutdown servers, in order to avoid charge, need to delete the resource entirely
 * linode provides SSD local storage at no extra cost, on all tiers
 
+Common linode types & pricing
+=============================
+$ linode-cli linodes types
+g6-nanode-1    @ $0.0075/hour, $0.17/day = $ 5/month, 1vCPU shared   /1GB-RAM/25GB SSD
+g6-standard-1  @ $ 0.015/hour, $0.33/day = $10/month, 1vCPU shared   /2GB-RAM/50GB SSD
+g6-standard-2  @ $  0.03/hour, $0.66/day = $20/month, 2xCPU shared   /4GB-RAM/80GB SSD
+g6-dedicated-2 @ $ 0.045/hour, $1.00/day = $30/month, 2xCPU dedicated/4GB-RAM/80GB SSD
+* As of 2022, common CPUs in use are:
+- Newark, NJ:  AMD EPYC 7501 & 7601 32-Core (Naples'17) & AMD EPYC 7542 32-Core (Rome'19)
+- Toronto, ON: AMD EPYC 7601 32-Core (Naples'17) & AMD EPYC 7642 48-Core (Rome'19)
+* linode provides SSD local storage at no extra cost, on all tiers
+
 Object Storage Cost - S3 compatible
 ===================================
 https://www.linode.com/pricing/#object-storage
@@ -24,7 +36,7 @@ install linode-cli
 $ sudo apt update
 $ sudo apt install python3 python3-pip
 cd $HOME
-$ pip3 install linode-cli --upgrade
+$ pip3 install linode-cli --upgrade    <-- this also upgrades
 <should install to: ~/.local/bin and ~/.local/lib/python3>
 
 configure linode-cli
@@ -71,18 +83,6 @@ $ linode-cli linodes rebuild $lin_id --image linode/debian9 --root-pass
 # delete linode:
 $ linode-cli linodes list 		<-- get the linode id
 $ linode linodes delete $lin_id		<-- delete linode
-
-Reference: Common linode types
-==============================
-$ linode-cli linodes types
-g6-nanode-1    @ $0.0075/hour = $ 5/month, 1vCPU shared   /1GB-RAM/25GB SSD
-g6-standard-1  @ $ 0.015/hour = $10/month, 1vCPU shared   /2GB-RAM/50GB SSD
-g6-standard-2  @ $  0.03/hour = $20/month, 2xCPU shared   /4GB-RAM/80GB SSD
-g6-dedicated-2 @ $ 0.045/hour = $30/month, 2xCPU dedicated/4GB-RAM/80GB SSD
-* As of 2022, common CPUs in use are:
-- Newark, NJ:  AMD EPYC 7501 & 7601 32-Core (Naples'17) & AMD EPYC 7542 32-Core (Rome'19)
-- Toronto, ON: AMD EPYC 7601 32-Core (Naples'17) & AMD EPYC 7642 48-Core (Rome'19)
-* linode provides SSD local storage at no extra cost, on all tiers
 
 Reference: Common OS image types
 ================================
