@@ -115,6 +115,7 @@ Regions	Location		Launch Date
 9	Toronto, Canada		Q2, 2019 <-- closest & newest
 10	Mumbai, India		Q2, 2019
 11	Sydney, Australia	Q3, 2019
+- DHCP IP reference: https://www.linode.com/docs/guides/dhcp-ip-address-reference/
 
 
 
