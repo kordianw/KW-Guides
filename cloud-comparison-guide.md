@@ -114,6 +114,7 @@ Documentation: https://cloud.google.com/shell/docs/how-cloud-shell-works
 
 ### AWS CloudShell:
 - based on Amazon Linux 2 (based on RHEL), with 1GB persistent $HOME (per-region), 2 x vCPU, 4GB RAM, SSD (all)
+- runs under an AWS ECS container and limits CPU to 1 CPU and RAM to 2GB
 NB: limits: 20-30mins after logout resets VM (you get a new VM), max 12 hour session time, weekly usage limit (not sure?), 12hr max session, 1GB home-dir deleted >120 days (4 months) of inactivity
 - sudo available - can install additional packages via yum
 - web-only, no external IP address
@@ -158,7 +159,7 @@ Documentation: https://docs.microsoft.com/en-us/azure/cloud-shell/overview
 + sudo
 + SSD
 
-- older HW (slowest)
+- older HW (slowest) & strict AWS ECS limits
 - non-standard Linux (Amazon Linux 2)
 - small Homedir @ 1GB
 - seems slowest to start-up
