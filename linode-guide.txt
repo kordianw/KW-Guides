@@ -6,6 +6,8 @@ $ linode-cli linodes types 		<-- machine types and prices
 * Hourly Billing (min=1 hour, max capped at monthly rate)
 * NB: note that linode charges for non-running/shutdown servers, in order to avoid charge, need to delete the resource entirely
 * linode provides SSD local storage at no extra cost, on all tiers
+* only count outbound network transfer, public data against this cap – inbound private data transfers don't count
+  - transfer caps for each of the Linodes are pooled across the entire account to form a single quota - charge an additional $0.01 per GB transferred beyond the quota
 
 Common linode types & pricing
 =============================
