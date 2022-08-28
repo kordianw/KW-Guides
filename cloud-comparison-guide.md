@@ -95,6 +95,7 @@ No Free Tier, but $100 credit for 60 days
 
 ### Google Cloud Shell:
 - based on Debian Linux, with 5GB persistent $HOME, 4 x vCPU, 16GB of RAM, SSD+HDD
+- runs under K8s container with "best-effort" (low-class) QoS
 - to use SSH via external IP, download Google Cloud SDK (Linux version works on Cygwin): https://cloud.google.com/sdk/docs/install-sdk#linux
 - sudo available - can install additional packages via apt install
 - no need to initialize or do anything, just run `gcloud` as-is:
@@ -124,6 +125,7 @@ Documentation: https://docs.was.amazon.com/cloudshell/
 
 ### Azure Cloud Shell:
 - based CBL Linux (based on Debian), with 5GB persistent 5GB $HOME, 2 x vCPU, 4GB RAM, HDD (no SSD)
+- runs under K8s container with "burstable" (medium-class) QoS
 - based on CBL - Common Base Linux (Microsoft Linux distribution), which is Debian like
 - NB: no root access, no sudo, just your $HOME and /tmp, can not install additional system-wide packages/tools
       -> see suggestions: https://edyoung.github.io/blog/install_tools_locally/
@@ -154,6 +156,7 @@ Documentation: https://docs.microsoft.com/en-us/azure/cloud-shell/overview
 
 - no SSD
 - strict session limits
+- "besteffort" (lowest) K8s QoS
 
 ### AWS CloudShell:
 + sudo
@@ -164,10 +167,12 @@ Documentation: https://docs.microsoft.com/en-us/azure/cloud-shell/overview
 - small Homedir @ 1GB
 - seems slowest to start-up
 - no app access (yet?)
+- most restrictive container CPU+Mem limits
 
 ### Azure Cloud Shell:
 + recent HW
-+ fastest to start-up
++ fast to start-up
++ "burstable" K8s QoS
 
 - no sudo
 - non-standard Linux (CBL Linux)
