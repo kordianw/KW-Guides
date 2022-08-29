@@ -141,6 +141,10 @@ Documentation: https://docs.microsoft.com/en-us/azure/cloud-shell/overview
   - for $5-$6/month can be used with more features incl. SSH-in (ssh.pythonanywhere.com) and full internet access
   - PROS: fast AWS machine type: m5d.xlarge (4x vCPU/16GB/Cascade Lake'19/NVMEe SSD), easy web-accessibility, optional SSH access, Ubuntu
   - CONS: no-root/no-sudo, NFS mounted key directories, highly restricted build
+- https://linuxcontainers.org/lxd/try-it/
+  - root-based Ubuntu terminal, limited internet connectivity
+- https://www.onworks.net/
+  - can get Linux desktop access, incl. terminal, limited internet connectivity
 - https://www.online-ide.com/  <-- can run basic shell commands, no outside internet access
   - VERY limited, not recommended for anything but testing
 - https://www.webminal.org/terminal/  <-- basic shell, no outside internet access
