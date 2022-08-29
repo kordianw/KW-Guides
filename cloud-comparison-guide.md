@@ -130,6 +130,7 @@ Documentation: https://docs.was.amazon.com/cloudshell/
 - NB: no root access, no sudo, just your $HOME and /tmp, can not install additional system-wide packages/tools
       -> see suggestions: https://edyoung.github.io/blog/install_tools_locally/
       -> can also use tools such as `Junest' to be able to install packages
+      -> can also use busybox: wget https://busybox.net/downloads/binaries/1.31.0-defconfig-multiarch-musl/busybox-x86_64
 - NB: 20 mins timeout, 5GB home (paid), long-running sessions are terminated
 - **web-url**: https://shell.azure.com
 

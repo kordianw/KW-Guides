@@ -34,6 +34,8 @@ INSTALL PACKAGES without root:
 https://github.com/fsquillace/junest 	<-- installs Arch Linux in $HOME with full rights
 /OR/
 https://github.com/dex4er/fakechroot
+/OR/
+busybox: wget https://busybox.net/downloads/binaries/1.31.0-defconfig-multiarch-musl/busybox-x86_64
 
 REMOVE:
 - sudo apt remove package     Uninstalls a package
