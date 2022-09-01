@@ -40,6 +40,7 @@ git push origin master
 
 git fetch                               # download all the latest changes from remote, but don't apply
 git pull                                # cf: cvs update - most common command to update your local tree!
+git pull origin master                  # pull the origin / master
 git checkout business_logic
 git pull business_logic
 git merge api                           # merges another branch's changes into your branch
@@ -49,6 +50,7 @@ git checkout -- <filename>              # revert your changes for a file and res
 git fetch origin; git reset --hard origin/master        # drop all your local changes and commits, fetch the latest history from the server and point your local master branch at it
 
 * Branching
+git rev-parse --abbrev-ref HEAD # what is the current branch you're on?
 git checkout -b feature_x       # create a new branch named "feature_x" and switch to it
 git checkout master             # switch back to master
 git branch                      # what branch are you in?
