@@ -90,6 +90,68 @@ No Free Tier, but $100 credit for 60 days
 - VMs start from $4/month (for 1CPU/512MB RAM/SSD)
 - US-EAST: Nearest DC is in New York City, NY
 
+## Cloud Storage Comparison:
+
+### AWS
+
+- Standard: $21/TB/month ($0.021/GB/month)
+- $0.05+/GB for bandwidth
+
+### Azure
+
+- Standard: $17.40/TB/month ($0.017/GB/month)
+- $0.04+/GB for bandwidth
+
+### GCP
+
+- Standard: $20.48/TB/month ($0.02/GB/month)
+- $0.12/GB for bandwidth
+
+### Backblaze
+
+- URL: https://www.backblaze.com/b2/cloud-storage.html
+- 3 regions (2 in U.S. and 1 in E.U.)
+- $5/TB/month ($0.00488/GB/month): https://www.backblaze.com/b2/cloud-storage-pricing.html
+- $0.01/GB bandwidth
+
+### Wasabi
+
+- URL: https://wasabi.com/cloud-storage-pricing
+- $5.99/TB/mo
+- Unlimited free egress
+- Minimum storage policy requiring a minimum of 1TB of data stored
+- Minimum storage duration policy that requires you to pay a minimum of 90 days storage
+- Bandwidth fair use policy that doesn't allow more upload vs. download volume
+- S3 compatible
+
+### Storj
+
+- URL: https://www.storj.io/pricing
+- Storage Cost: $4/TB/month ($0.0039/GB/month)
+- Bandwidth Cost: $7/TB ($0.0068/GB)
+- 150GB for free
+- 3 regions: US1, EU1, AP1
+- smallest billing increment for a file is 64MB - not suitable for small files
+- S3 compatible
+- 16,000+ nodes in 99+ countries: https://storjnet.info/
+
+### CloudFlare R2
+
+- URL: https://www.cloudflare.com/products/r2/
+- $15/month/TB ($0.015/GB/month)
+- no egrees fees
+- 10GB free tier
+- S3 compatible
+
+### Dropbox
+
+### Google Drive
+
+### OneDrive
+
+### Linode
+
+- $20/$TB/month
 
 ## Cloud Shell Comparison:
 
