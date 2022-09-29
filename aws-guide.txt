@@ -1,0 +1,10 @@
+EC2
+===
+R5d.xLarge
+Instance Type:
+R=Instance Family
+5=Instance Generation
+d=additional capability
+xLarge=Instance Size
+
+Good ref: https://www.nakivo.com/blog/the-definitive-guide-to-was-ec2-instance-types/
