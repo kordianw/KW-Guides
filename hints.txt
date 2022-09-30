@@ -16,7 +16,7 @@ Allows requests to localhost over HTTPS even when an invalid certificate is pres
 --ignore-certificate-errors
 eg: on Mac start Chrome from bash: /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --ignore-certificate-errors &> /dev/null &
 
-Updating GRUB
+Updating GRUB (old lilo)
 =============
 $ sudo vi /etc/default/grub
 GRUB_DEFAULT=x 	# which entry is the default, 0=1st, 1=2nd, etc
