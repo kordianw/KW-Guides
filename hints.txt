@@ -39,4 +39,11 @@ $ amixer set Master 10%+   # raise volume by each 10 %
 $ amixer set Master 10%-   # reduce volume by each 10 %
 $ amixer set Master toggle # mute/unmute audio
 
+Python venv (virtual environment)
+=================================
+python3 -m venv ./venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+python3 main.py
+
 # EOF
