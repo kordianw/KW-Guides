@@ -1,4 +1,4 @@
-OSI Network Layers
+OSI Network Layers (2023-08)
 ==================
 Layer 7 - Application (eg: www browsers, telnet, ftp)
 Layer 6 - Presentation (eg: encryption, compression, ASCII, MPEG, JPG)
@@ -24,7 +24,7 @@ GRUB_TIMEOUT=x  # how many seconds before default?
 $ sudo update-grub
 actually update the GRUB after changes were made
 
-Volume on Linux/Mint
+Volume on Linux/Mint (2023-10)
 ====================
 - alsamixer 
 check everything is set to 100% correctly, use F6 to switch between cards
@@ -39,11 +39,75 @@ $ amixer set Master 10%+   # raise volume by each 10 %
 $ amixer set Master 10%-   # reduce volume by each 10 %
 $ amixer set Master toggle # mute/unmute audio
 
-Python venv (virtual environment)
+Python venv (virtual environment) (2023-11)
 =================================
 python3 -m venv ./venv
 source venv/bin/activate
 pip3 install -r requirements.txt
 python3 main.py
 
+Best hospitals in Hudson County, NJ (2023-12)
+===================================
+SRC: https://dailyvoice.com/new-jersey/hudson/see-how-north-jersey-hospitals-rank-for-safety-in-america/
+
+Best NJ Hospitals Are:
+- Englewood Hospital and Medical Center
+- Hackensack Meridian Hackensack University Medical Center
+- Overlook Medical Center
+- Robert Wood Johnson University Hospital Rahway
+- St. Mary's General Hospital (Passaic)
+- The Valley Hospital (Ridgewood)
+
+Closest hospitals:
+- A: Overlook Medical Center
+- A: Hackensack Meridian Hackensack University Medical Center
+- A: Englewood Hospital & Medical Center
+- B: Jersey City Medical Center (JCMC)
+- C: Bayonne Medical Center (BMC)
+- C: Christ Hospital Jersey City (BMC)
+- C: Hoboken University Medical Center (BMC)
+
+Enable Remote Desktop (RDP) on Windows 10/11 HOME (2024-12)
+=================================================
+Intro & Guide: https://monovm.com/blog/what-is-rdp-wrapper/
+* Note that the online Installer doesn’t get the latest Win11 compatible INI file, hence there is a need to do a manual installation
+
+Read about RDP Wrapper here: https://github.com/stascorp/rdpwrap/releases
+Download RDP Wrapper Library (as a ZIP): https://github.com/stascorp/rdpwrap/releases
+The latest (as of 2024) is v1.6.2
+
+Take the following steps in Win11 Home:
+- Navigate to the RDP Wrapper’s folder path & Extract the ZIP into a folder
+- Start an Administrator Command Prompt & navigate to the extracted folder
+- Then run ‘Install.bat’.
+- Run RDPConf and it will show that the Listener is not Listening
+
+Get the latest INI file: https://github.com/affinityv/INI-RDPWRAP
+- Download the entire code via Code->Download ZIP
+- Extract the RDWRAP.INI file
+- Copy to C:\Program Files\RDP Wrapper and overwrite the existing INI file
+- Restart the PC
+- Run ‘RDPConf’ and it will show that the Listener is now Listening
+Note: Alternative latest INI file can be found here: https://github.com/XSR1/rdpwrap
+
+There is also a workaround to use Remote Desktop on HOME edition, without installing anything: https://www.thurrott.com/windows/windows-11/302396/tip-the-remote-desktop-workaround
+
+Bypass Paywalls Clean Chrome Extension (2024-12)
+======================================
+Latest news: https://x.com/Magnolia1234B
+Latest code: https://gitflic.ru/project/magnolia1234/bypass-paywalls-chrome-clean
+Latest releases: https://gitflic.ru/project/magnolia1234/bpc_uploads
+v3.9.7.4 is latest (installed on 2024-12-28)
+* check ChangeLog: https://gitflic.ru/project/magnolia1234/bypass-paywalls-chrome-clean/blob/?file=changelog.txt&branch=master
+
+Chrome Install Guide:
+- Download this repository as a zip-file from GitFlic: https://gitflic.ru/project/magnolia1234/bpc_uploads/blob/raw?file=bypass-paywalls-chrome-clean-master.zip
+- Unzip the file and you should have a folder named bypass-paywalls-chrome-clean-master
+- Move the folder to a permanent location on your computer (do not delete the folder after installation).
+- Go to the extensions page: chrome://extensions
+- Enable Developer Mode.
+- Click Load unpacked and select/open the extension folder (contains file manifest.json).
+FYI: Navigate to: W:\Apps\User\Google Chrome
+
+# vi:syntax=markdown:
 # EOF
