@@ -109,5 +109,61 @@ Chrome Install Guide:
 - Click Load unpacked and select/open the extension folder (contains file manifest.json).
 FYI: Navigate to: W:\Apps\User\Google Chrome
 
+Churning Credit Card cash for points (2025-02)
+====================================
+* Option 1: NJ Property Taxes
+  http://taxes.cityofjerseycity.com/ViewPay?accountNumber=565317
+
+2.20% of the payment amount for Visa/Mastercard/AMEX/Discover
+$0.50 for electronic checks
+
+* Option 2: FirstResidential HOA Payment
+  https://portal.connectresident.com/#/dashboard
+
+3.00% of payment amount for Visa/Mastercard/AMEX/Discover
+$3.00 for electronic checks
+
+DYNU.COM Guide
+==============
+* get the status of domains - to update a specific DNS record, you need its Record ID, from the below
+curl -sX GET "https://api.dynu.com/v2/dns" -H "API-Key: WbXVY3da5cW34443V3554U54Tfc2cbd3" | jq
+{
+  "statusCode": 200,
+  "domains": [
+    {
+      "id": 11102924,
+      "name": "gcp-shell.mywire.org",
+      "unicodeName": "gcp-shell.mywire.org",
+      "token": "NMXYDEHINVMWFXQKBVLR",
+      "state": "Complete",
+      "group": "",
+      "ipv4Address": "34.23.135.24",
+      "ipv6Address": null,
+      "ttl": 120,
+      "ipv4": true,
+      "ipv6": false,
+      "ipv4WildcardAlias": false,
+      "ipv6WildcardAlias": false,
+      "createdOn": "2025-02-16T16:10:18",
+      "updatedOn": "2025-02-16T16:11:22.487"
+    }
+  ]
+}
+
+* to update:
+curl "https://api.dynu.com/nic/update?hostname=<HOST>&myip=<IP>&password=<MD5>"
+eg: curl "https://api.dynu.com/nic/update?hostname=gcp-shell.mywire.org&myip=34.23.135.26&password=5685e925806f52d29a2f227610beae7c"
+
+Documentation: https://www.dynu.com/zh-CN/DynamicDNS/IPUpdateClient/cURL
+
+* to work out MD5: https://www.dynu.com/NetworkTools/Hash
+
+One Line Activation of Windows+Office
+=====================================
+Run PowerShell as Admin:
+irm https://get.activated.win | iex
+* more info: https://github.com/NiREvil/windows-activation
+
+
 # vi:syntax=markdown:
 # EOF
