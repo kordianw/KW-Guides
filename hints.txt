@@ -126,7 +126,7 @@ $3.00 for electronic checks
 DYNU.COM Guide
 ==============
 * get the status of domains - to update a specific DNS record, you need its Record ID, from the below
-curl -sX GET "https://api.dynu.com/v2/dns" -H "API-Key: WbXVY3da5cW34443V3554U54Tfc2cbd3" | jq
+curl -sX GET "https://api.dynu.com/v2/dns" -H "API-Key: <key>" | jq
 {
   "statusCode": 200,
   "domains": [
@@ -152,7 +152,7 @@ curl -sX GET "https://api.dynu.com/v2/dns" -H "API-Key: WbXVY3da5cW34443V3554U54
 
 * to update:
 curl "https://api.dynu.com/nic/update?hostname=<HOST>&myip=<IP>&password=<MD5>"
-eg: curl "https://api.dynu.com/nic/update?hostname=gcp-shell.mywire.org&myip=34.23.135.26&password=5685e925806f52d29a2f227610beae7c"
+eg: curl "https://api.dynu.com/nic/update?hostname=gcp-shell.mywire.org&myip=34.23.135.26&password=<key>"
 
 Documentation: https://www.dynu.com/zh-CN/DynamicDNS/IPUpdateClient/cURL
 
